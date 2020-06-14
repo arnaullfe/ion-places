@@ -13,7 +13,10 @@ export class HomePage implements OnInit {
   constructor(private photosService : PhotosService) { }
 
   ngOnInit() {
-    this.photos = this.photosService.getPhotos()
+    this.photosService.getPhotos().subscribe(data=>{
+      console.log(data)
+      this.photos = data;
+    })
   }
 
 }
