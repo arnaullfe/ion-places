@@ -21,7 +21,7 @@
         <ion-card-content>
           <ion-item>
             <ion-label position="stacked">Image URL<ion-text color="danger">*</ion-text></ion-label>
-            <ion-textarea type="text" placeholder="https://image.example.png" value="{{place.imageURL}}" [auto-resize-textarea]="320" #imageURL></ion-textarea>
+            <ion-input type="text" placeholder="https://image.example.png" value="{{place.imageURL}}" #imageURL></ion-input>
           </ion-item>
           <ion-button class="center" color="primary" (click)="saveEditPlace(title, imageURL)">Save</ion-button>
         </ion-card-content>
