@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'place-add',
     loadChildren: () => import('./place-add/place-add.module').then( m => m.PlaceAddPageModule)
+  },
+  {
+    path: 'place-edit',
+    loadChildren: () => import('./place-edit/place-edit.module').then( m => m.PlaceEditPageModule)
   }
 ];
 

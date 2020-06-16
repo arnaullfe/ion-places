@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places/{{place.id}}"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit - <b>{{place.title}}</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-item>
+            <ion-label position="stacked">Title<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input type="text" placeholder="Title" value="{{place.title}}" #title></ion-input>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="stacked">Image URL<ion-text color="danger">*</ion-text></ion-label>
+            <ion-textarea type="text" placeholder="https://image.example.png" value="{{place.imageURL}}" [auto-resize-textarea]="320" #imageURL></ion-textarea>
+          </ion-item>
+          <ion-button class="center" color="primary" (click)="saveEditPlace(title, imageURL)">Save</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

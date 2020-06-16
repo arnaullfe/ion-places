@@ -43,8 +43,9 @@ export class PlaceDetailPage implements OnInit {
     });
 
     await alertElement.present()
-
-
-    
+  }
+  
+  editPlace(){
+    this.router.navigate(["/places","edit",this.place.id]);
   }
 }

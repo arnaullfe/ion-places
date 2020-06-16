@@ -27,6 +27,7 @@ export class PlacesService {
       imageURL : 'https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY1MTc1MTk3ODI0MDAxNjA5/topic-statue-of-liberty-gettyimages-960610006-promo.jpg',
       comments : []
     },
+    
   ]
 
   constructor() { 
@@ -58,6 +59,16 @@ export class PlacesService {
     this.places = this.places.filter(place => {
       return place.id!=placeID
     })
+  }
+
+  editPlace(placeEdit:Place){
+    for(let place of this.places){
+      if(place.id==placeEdit.id){
+        place.title = placeEdit.title;
+        place.imageURL = placeEdit.imageURL;
+        break;
+      }
+    }
   }
 
 }
